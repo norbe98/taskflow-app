@@ -12,11 +12,11 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50">
 
-      <Toaster richColors duration={1000} expand position="bottom-left" />
+      <Toaster richColors duration={2000} expand position="bottom-left" />
 
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 py-8 md:px-8 md:py-12 animate-in fade-in duration-500">
+      <main className="mx-auto w-full max-w-7xl px-4 py-8 md:px-8 md:py-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUpPage />} />
