@@ -48,8 +48,7 @@ return (
         onSubmit={(e) => {
           e.preventDefault()
           handleSignUp()
-        }}
-      >
+        }}>
         <h2 className="text-3xl font-bold text-slate-800 mb-2">
           Create your account
         </h2>
@@ -68,8 +67,7 @@ return (
               value={email}
               type="email"
               placeholder="you@example.com"
-              onChange={(e) => setEmail(e.target.value)}
-            />
+              onChange={(e) => setEmail(e.target.value)}/>
           </div>
 
           <div>
@@ -81,14 +79,12 @@ return (
               value={password}
               type="password"
               placeholder="Create a password"
-              onChange={(e) => setPassword(e.target.value)}
-            />
+              onChange={(e) => setPassword(e.target.value)}/>
           </div>
 
           <button
             className="mt-2 bg-slate-900 text-white py-3 rounded-xl font-medium hover:bg-slate-700 transition disabled:opacity-70"
-            disabled={loading}
-          >
+            disabled={loading}>
             {loading ? "Creating account..." : "Sign up"}
           </button>
         </div>
@@ -99,8 +95,7 @@ return (
               message === "You registered successfully!"
                 ? "text-green-600"
                 : "text-red-600"
-            }`}
-          >
+            }`}>
             {message}
           </p>
         )}

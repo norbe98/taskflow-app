@@ -48,8 +48,7 @@ export default function SignInPage() {
             onSubmit={(e) => {
             e.preventDefault()
             handleSignIn()
-            }}
-        >
+            }}>
             <h2 className="text-3xl font-bold text-slate-800 mb-2">
             Sign in to your account
             </h2>
@@ -68,8 +67,7 @@ export default function SignInPage() {
                 value={email}
                 type="email"
                 placeholder="you@example.com"
-                onChange={(e) => setEmail(e.target.value)}
-                />
+                onChange={(e) => setEmail(e.target.value)}/>
             </div>
 
             <div>
@@ -80,14 +78,12 @@ export default function SignInPage() {
                 className="w-full border border-slate-300 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-slate-800"
                 value={password}
                 type="password"
-                onChange={(e) => setPassword(e.target.value)}
-                />
+                onChange={(e) => setPassword(e.target.value)}/>
             </div>
 
             <button
                 className="mt-2 bg-slate-900 text-white py-3 rounded-xl font-medium hover:bg-slate-700 transition disabled:opacity-70"
-                disabled={loading}
-            >
+                disabled={loading}>
                 {loading ? "Signing in..." : "Sign in"}
             </button>
             </div>
@@ -98,8 +94,7 @@ export default function SignInPage() {
                 message === "You registered successfully!"
                     ? "text-green-600"
                     : "text-red-600"
-                }`}
-            >
+                }`}>
                 {message}
             </p>
             )}
