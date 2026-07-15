@@ -2,7 +2,7 @@ import express, { type Response } from 'express'
 import authMiddleware from '../middleware/auth.middleware.js'
 import type { AuthRequest } from '../types/types.js'
 import { prisma } from '../prisma.js'
-import { TaskStatus } from '../../generated/prisma/enums.js'
+import { TaskStatus } from '../../generated/prisma/client.js'
 
 export const projectRouter = express.Router()
 
