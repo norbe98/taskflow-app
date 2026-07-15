@@ -22,8 +22,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-8">
                     <Link
                     to="/"
-                    className="flex items-center gap-3"
-                    >
+                    className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center">
                         <Home size={20} className="text-white" />
                     </div>
@@ -40,8 +39,7 @@ export default function Navbar() {
                         isActive("/projects")
                             ? "bg-slate-100 text-slate-900"
                             : "text-slate-600 hover:bg-slate-100"
-                        }`}
-                    >
+                        }`}>
                         Projects
                     </Link>
                     </div>
@@ -97,10 +95,10 @@ export default function Navbar() {
 
                 <button
                     onClick={() => setIsOpen((prev) => !prev)}
-                    className="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition"
-                >
+                    className="md:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition">
                     {isOpen ? <X size={22} /> : <SquareMenu size={22} />}
                 </button>
+
                 </div>
             </div>
 
@@ -109,8 +107,7 @@ export default function Navbar() {
                 <Link
                     to="/projects"
                     onClick={() => setIsOpen(false)}
-                    className="block px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-100"
-                >
+                    className="block px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-100">
                     Projects
                 </Link>
 
@@ -122,8 +119,7 @@ export default function Navbar() {
 
                     <button
                         onClick={logOut}
-                        className="w-full px-4 py-3 rounded-xl bg-slate-900 text-white"
-                    >
+                        className="w-full px-4 py-3 rounded-xl bg-slate-900 text-white">
                         Logout
                     </button>
                     </>
@@ -132,16 +128,14 @@ export default function Navbar() {
                     <Link
                         to="/signin"
                         onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-100"
-                    >
+                        className="block px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-100">
                         Sign In
                     </Link>
 
                     <Link
                         to="/signup"
                         onClick={() => setIsOpen(false)}
-                        className="block px-4 py-3 rounded-xl bg-slate-900 text-white text-center"
-                    >
+                        className="block px-4 py-3 rounded-xl bg-slate-900 text-white text-center">
                         Get Started
                     </Link>
                     </>
