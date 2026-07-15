@@ -16,12 +16,17 @@ next: NextFunction
 
     if(!token) return res.status(401).json({ message: "Token not found" })
 
-    const decoded = jwt.verify(
-        token, 
-        process.env.JWT_SECRET!
-    ) as JwtUser
+    try {
+        const decoded = jwt.verify(
+            token,
+            process.env.JWT_SECRET!
+        ) as JwtUser
 
-    req.user = decoded
-
-    next()
+        req.user = decoded
+        next()
+    } catch {
+        return res.status(401).json({
+            message: "Your session is invalid or has expired."
+        })
+    }
 }
